@@ -9,24 +9,21 @@ public class Main {
             
             if (n == 1) {
                 System.out.println(1);
-                continue;
             } else if (n == 2) {
                 System.out.println(2);
-                continue;
             } else if (n == 3) {
                 System.out.println(4);
-                continue;
+            } else {
+                int[] nArr = new int[n];
+                nArr[0] = 1;
+                nArr[1] = 2;
+                nArr[2] = 4;
+                
+                for(int j = 3; j < n; j++){
+                    nArr[j] = nArr[j - 1] + nArr[j - 2] + nArr[j - 3];
+                }
+                System.out.println(nArr[n - 1]);
             }
-            
-            int[] nArr = new int[n];
-            nArr[0] = 1;
-            nArr[1] = 2;
-            nArr[2] = 4;
-            
-            for(int j = 3; j < n; j++){
-                nArr[j] = nArr[j - 1] + nArr[j - 2] + nArr[j - 3];
-            }
-            System.out.println(nArr[n - 1]);
         }
     }
 }
