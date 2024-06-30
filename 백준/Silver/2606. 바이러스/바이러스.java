@@ -31,21 +31,6 @@ public class Main {
             list.get(two).add(one);
         }
 
-        // System.out.println(Arrays.deepToString(arr));
-
-//        for (int i = 0; i < network; i++) {
-//            String[] input = br.readLine().split(" ");
-//            int index = Integer.parseInt(input[0]);
-//            int value = Integer.parseInt(input[1]);
-//            for (int j = 0; j < arr[0].length; j++) {
-//                if(arr[index][j] == 0){
-//                    arr[index][j] = value;
-//                    break;
-//                }
-//            }
-//            list.add(new ArrayList<>());
-//        }
-
         int answer = dfs(1);
         System.out.println(answer - 1);
 
